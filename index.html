@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <title>Cleaned M&J's wedding</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- <meta name="viewport" content="width=device-stylesheet" type="text/css" media="all"> -->
+</head>
+
+<style>
+  @font-face {
+    font-family: AmellindaWeddings;
+    src: url('fonts/amellinda_weddings/Amellinda\ Weddings.otf');
+  }
+
+  .MJ{
+    font-family: AmellindaWeddings;
+    font-size: 350%;
+    text-align: center;
+    color: bisque;
+  }
+
+  @font-face {
+    font-family: mont;
+    src: url('fonts/mont/Mont-HeavyDEMO.otf');
+  }
+
+  .contdown{
+    color: white;
+    font-family: mont;
+    font-size: 200%;
+    text-align: center;
+    background-color:#96bb7c;
+    border: cyan;
+    margin-top: -30px;
+  }
+  @font-face {
+    font-family: southmore;
+    src: url('fonts/southmore/Southmore.ttf');
+  }
+  .fecha{
+    font-family: southmore;
+    color:floralwhite;
+    font-size: 150%;
+    background-color: 	#daae9e;
+  }
+
+  .bg1 {
+    background-image: url('images/IMG_2018.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  .bg2 {
+    background-image: url('images/1998Editada.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+    
+  }
+  .bg3{
+    background-image: url('images/IMG_2033.JPG');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+    
+  }
+.textos{
+    font-family: AmellindaWeddings;
+    font-size: 150%;
+    text-align: top;
+    color: bisque;
+
+}
+</style>
+<script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Apr 22, 2022 17:00:00").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function () {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+
+    // If the count down is over, write some text 
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+</script>
+<body>
+  <!--TODO DENTRO DE ESTE DIV-->
+  <div class="bg1">
+    <div class="MJ"><br>Maryana<br>y<br>Jorge<br><br><br></div>
+    <p align="center" class="fecha">22.04.2022</p>
+    <p class= "contdown" id="demo"></p><br><br><br><br><br>
+  </div>
+  <div class="bg2">
+    <br>
+    <div>
+      <!--img src="images/icons/iglesia.png" style="width:90px; height: 90px; float: left; margin-left: 10px;"></img-->
+      <a class="textos" href="https://bit.ly/3y8fisp" style="top: -20; margin-left: 1rem; word-wrap: break-word;"> Parroquia El Señor de la Misericordia</a>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
+  <div class="bg3">
+    <br>
+    <div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
+</body>
+
+</html>
