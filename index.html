@@ -14,11 +14,11 @@
     src: url('fonts/amellinda_weddings/Amellinda\ Weddings.otf');
   }
 
-  a{
+  a {
     text-decoration: none;
   }
 
-  .MJ{
+  .MJ {
     font-family: AmellindaWeddings;
     font-size: 350%;
     text-align: center;
@@ -30,24 +30,31 @@
     src: url('fonts/mont/Mont-HeavyDEMO.otf');
   }
 
-  .contdown{
+  .contdown {
     color: white;
     font-family: mont;
     font-size: 200%;
     text-align: center;
-    background-color:#96bb7c;
+    background-color: #96bb7c;
     border: cyan;
     margin-top: -30px;
   }
+
   @font-face {
     font-family: bebas;
     src: url('fonts/bebas_neue/BebasNeue-Regular.otf');
   }
-  .fecha{
+
+  @font-face {
+    font-family: louis_george;
+    src: url('fonts/louis_george_caf/Louis George Cafe.ttf');
+  }
+
+  .fecha {
     font-family: southmore;
-    color:floralwhite;
+    color: floralwhite;
     font-size: 150%;
-    background-color: 	#daae9e;
+    background-color: #daae9e;
   }
 
   .bg1 {
@@ -57,31 +64,59 @@
     background-position: center;
     background-size: cover;
   }
+
   .bg2 {
     background-image: url('images/1998Editada.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: bottom;
     background-size: cover;
-    
+
   }
-  .bg3{
-    background-image: url('images/IMG_2033.JPG');
+
+  .bg3 {
+    background-image: url('images/2033Editada.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: bottom;
     background-size: cover;
-    
+
   }
-.textos{
-    font-family: bebas;
+
+  .bgParroquia {
+    background-image: url('images/parroquia.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+
+  }
+
+  .bgTextos {
+    background-color: beige;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+
+  }
+
+  .textos {
+    font-family: louis_george;
     font-size: 150%;
     border-radius: 35px;
-    background-color:rgba(254, 237, 190, .5);
     background-size: cover;
-    /*text-align: top;*/
-    color: white;
-}
+    text-align: center;
+    color: black;
+  }
+  .textosPequeños{
+    font-family: 'Segoe UI';
+    font-size: 80%;
+    border-radius: 35px;
+    background-size: cover;
+    align-content: center;
+    color: black;
+  }
 </style>
 <script>
   // Set the date we're counting down to
@@ -113,19 +148,51 @@
     }
   }, 1000);
 </script>
+
 <body>
   <!--TODO DENTRO DE ESTE DIV-->
+  <!--MARYANA & JORGE + CONTDOWN-->
   <div class="bg1">
     <div class="MJ"><br>Maryana<br>y<br>Jorge<br><br><br></div>
-    <p align="center" class="fecha">22.04.2022</p>
-    <p class= "contdown" id="demo"></p><br><br><br><br><br>
+    <!--p align="center" class="fecha">22.04.2022</p-->
+    <p class="contdown" id="demo"></p><br><br><br><br><br>
   </div>
+
+  <!--INFO DE LA PARROQUIA-->
+  <!--div class="bgParroquia">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="bgTextos">
+      <br><br><br><br>
+      <center>
+        <img src="images/icons/church2.png" width="30%" height="85"><br>
+        <a class="textos">Parroquia El Serñor de la Misericordia</a><br><br><br>
+        <a class="textosPequeños">Pueblo Serena, Carr Nacional #500, Sin Nombre de Col 50, 67350 Monterrey, N.L.</a><br><br>
+        <iframe
+          src="https://www.google.com.mx/maps/place/Parroquia+El+Se%C3%B1or+de+la+Misericordia/@25.5756457,-100.25021,17z/data=!3m1!4b1!4m5!3m4!1s0x8662c74fe88badc7:0x4adf7f3508cd3f60!8m2!3d25.5757551!4d-100.2479419?hl=es&authuser=0"
+          width="300" height="300" loading="lazy" style="border:5px solid white;">
+        </iframe>
+      </center>
+      <br><br><br><br><br><br>
+
+    </div>
+  </div-->
+
+  <!--SEGUNDA FOTO, QUIZA AQUI VAYA LA INFO DE LA MISA-->
   <div class="bg2">
     <br>
-    <div>
-      <!--img src="images/icons/iglesia.png" style="width:90px; height: 90px; float: left; margin-left: 10px;"></img-->
-      <br><a class="textos" href="https://bit.ly/3y8fisp" style="top: -20; margin-left: 1rem; word-wrap: break-word;"> Parroquia El Señor de la Misericordia</a>
-      <br><br><br><br><a class="textos" href="https://acortar.link/nBpZFD" style="top: 20; margin-left: 250px;">La herencia</a>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="bgTextos">
+        <br>
+        <center>
+          <img src="images/icons/church2.png" width="30%" height="85"><br>
+          <a class="textos">Parroquia El Señor de la Misericordia</a><br><br><br>
+          <a class="textosPequeños">Pueblo Serena, Carr Nacional #500, Sin Nombre de Col 50, 67350 Monterrey, N.L.</a><br><br>
+          <iframe
+            src="https://www.google.com.mx/maps/place/Parroquia+El+Se%C3%B1or+de+la+Misericordia/@25.5756457,-100.25021,17z/data=!3m1!4b1!4m5!3m4!1s0x8662c74fe88badc7:0x4adf7f3508cd3f60!8m2!3d25.5757551!4d-100.2479419?hl=es&authuser=0"
+            width="300" height="300" loading="lazy" style="border:5px solid white;">
+          </iframe>
+        </center>
+        <br><br>
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </div>
@@ -133,8 +200,8 @@
     <br>
     <!-- <div>
     </div> -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </div>
 </body>
 
-</html>
+</html> j
