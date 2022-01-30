@@ -9,6 +9,10 @@
 </head>
 
 <style>
+  :root {
+    --smaller: .75;
+  }
+
   @font-face {
     font-family: AmellindaWeddings;
     src: url('fonts/amellinda_weddings/Amellinda\ Weddings.otf');
@@ -16,7 +20,7 @@
 
   .MJ {
     font-family: AmellindaWeddings;
-    font-size: 350%;
+    font-size: 300%;
     text-align: center;
     color: bisque;
   }
@@ -30,7 +34,7 @@
     color: white;
     font-family: louis_george;
     font-weight: bolder;
-    font-size: 300%;
+    font-size: 200%;
     text-align: center;
     background-color: #c2a19d;
     border: cyan;
@@ -59,7 +63,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: initial
+    background-attachment: initial;
   }
 
   .bg2 {
@@ -123,7 +127,7 @@
   }
 
   .containerNumeros {
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     text-align: center;
     font-family: louis_george;
     color: black;
@@ -132,7 +136,7 @@
 
   li {
     display: inline-block;
-    font-size: 1.5em;
+    /*font-size: 1.5em;*/
     list-style-type: none;
     padding: 1em;
     text-transform: uppercase;
@@ -141,6 +145,20 @@
   li span {
     display: block;
     font-size: 4.5rem;
+  }
+
+  @media all and (max-width: 768px) {
+    h1 {
+      font-size: calc(1.5rem * var(--smaller));
+    }
+
+    li {
+      font-size: calc(1.125rem * var(--smaller));
+    }
+
+    li span {
+      font-size: calc(3.375rem * var(--smaller));
+    }
   }
 </style>
 <script>
@@ -165,27 +183,28 @@
           document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
       }, 0)
   }());
+
 </script>
 
 <body>
   <!--TODO DENTRO DE ESTE DIV-->
   <!--MARYANA & JORGE + CONTDOWN-->
-    <div class="bg1">
+  <div class="bg1">
     <div class="MJ"><br>Maryana<br>y<br>Jorge<br><br><br><br><br><br></div>
-      <div class="containerNumeros">
-        <div id="countdown">
-          <ul>
-            <li style="background-color: #eadbc7;"><span id="days"></span>dÍAS</li>
-            <li style="background-color: #eadbc7;"><span id="hours"></span>HORAS</li>
-            <li style="background-color: #eadbc7;"><span id="minutes"></span>MINUTOS</li>
-            <li style="background-color: #eadbc7;"><span id="seconds"></span>SEGUNDOS</li>
-          </ul>
-        </div>
+    <div class="containerNumeros">
+      <div id="countdown">
+        <ul>
+          <li style="background-color: #eadbc7;"><span id="days"></span>dÍAS</li>
+          <li style="background-color: #eadbc7;"><span id="hours"></span>HORAS</li>
+          <li style="background-color: #eadbc7;"><span id="minutes"></span>MINUTOS</li>
+          <li style="background-color: #eadbc7;"><span id="seconds"></span>SEGUNDOS</li>
+        </ul>
       </div>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
 
-  
+
   <!--SEGUNDA FOTO, QUIZA AQUI VAYA LA INFO DE LA MISA-->
   <div class="bg2">
     <br><br><br><br><br><br><br><br><br><br><br>
@@ -241,8 +260,10 @@
     <center>
       <div style="background-color: rgb(134, 204, 166); opacity: 0.8;">
         <br><br>
-        <a style="font-family: AmellindaWeddings; color:whitesmoke; font-size: 350%;">Confirma tu asistencia</a><br>
-        <a style="font-family: AmellindaWeddings; color:whitesmoke; font-size: 150%;">y la de tu acompañante</a><br>
+        <a style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:whitesmoke; font-size: 350%;">Confirma
+          tu asistencia</a><br>
+        <a style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:whitesmoke; font-size: 150%;">y la
+          de tu acompañante</a><br>
         <a href="https://api.whatsapp.com/send?phone=+528120389636&text=hola,%20ahí%20nos%20vemos%20;)"><img
             src="images/icons/wa.png" width="20%" height=" auto"></a>
         <br><br>
