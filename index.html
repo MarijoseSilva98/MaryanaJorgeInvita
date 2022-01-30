@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="es">
 
 <head>
   <title>Cleaned M&J's wedding</title>
@@ -13,6 +13,7 @@
     font-family: AmellindaWeddings;
     src: url('fonts/amellinda_weddings/Amellinda\ Weddings.otf');
   }
+
   .MJ {
     font-family: AmellindaWeddings;
     font-size: 350%;
@@ -31,7 +32,7 @@
     font-weight: bolder;
     font-size: 300%;
     text-align: center;
-    background-color: #96bb7c;
+    background-color: #c2a19d;
     border: cyan;
     margin-top: 20px;
   }
@@ -56,41 +57,40 @@
   .bg1 {
     background-image: url('images/IMG_2020.jpg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    background-attachment: initial
   }
 
   .bg2 {
     background-image: url('images/1998Editada.jpeg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: bottom;
     background-size: cover;
+    background-attachment: scroll;
 
   }
 
   .bg3 {
     background-image: url('images/2033Editada.jpeg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: bottom;
     background-size: cover;
+    background-attachment: scroll;
 
   }
+
   .bg4 {
     background-image: url('images/2018_editada.jpg');
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: bottom;
     background-size: cover;
-
+    background-attachment: scroll;
   }
 
   .bgTextos {
     background-color: #d9cbc1;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: bottom;
     background-size: cover;
     opacity: 0.8;
@@ -105,7 +105,8 @@
     text-align: center;
     color: black;
   }
-  .textosPequeños{
+
+  .textosPequeños {
     font-family: 'Segoe UI';
     font-size: 80%;
     border-radius: 35px;
@@ -113,76 +114,98 @@
     align-content: center;
     color: black;
   }
-  .bgLiso{
-    background-color:whitesmoke;
+
+  .bgLiso {
+    background-color: whitesmoke;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: bottom;
     background-size: cover;
   }
+
+  .containerNumeros {
+    margin: 0 auto;
+    text-align: center;
+    font-family: louis_george;
+    color: black;
+    font-size: 100%;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 1.5em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+
+  li span {
+    display: block;
+    font-size: 4.5rem;
+  }
 </style>
 <script>
-  // Set the date we're counting down to
-  var countDownDate = new Date("Apr 22, 2022 17:00:00").getTime();
 
-  // Update the count down every 1 second
-  var x = setInterval(function () {
+  (function () {
+    const second = 1000,
+      minute = second * 60,
+      hour = minute * 60,
+      day = hour * 24;
 
-    // Get today's date and time
-    var now = new Date().getTime();
+    var wedding = new Date("Apr 22, 2022 17:00:00").getTime()
 
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
+    const countDown = new Date(wedding).getTime(),
+      x = setInterval(function () {
 
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        const now = new Date().getTime(),
+          distance = countDown - now;
 
-    // Output the result in an element with id="demo"
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-      + minutes + "m " + seconds + "s ";
-
-    // If the count down is over, write some text 
-    if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("demo").innerHTML = "EXPIRED";
-    }
-  }, 1000);
+        document.getElementById("days").innerText = Math.floor(distance / (day)),
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+      }, 0)
+  }());
 </script>
 
 <body>
   <!--TODO DENTRO DE ESTE DIV-->
   <!--MARYANA & JORGE + CONTDOWN-->
-  <div class="bg1">
-    <div class="MJ"><br>Maryana<br>y<br>Jorge<br><br><br></div>
-    <!--p align="center" class="fecha">22.04.2022</p-->
-    <div class="contdown">
-      <a id="demo">
-      </a>
-      <br>
+    <div class="bg1">
+    <div class="MJ"><br>Maryana<br>y<br>Jorge<br><br><br><br><br><br></div>
+      <div class="containerNumeros">
+        <div id="countdown">
+          <ul>
+            <li style="background-color: #eadbc7;"><span id="days"></span>dÍAS</li>
+            <li style="background-color: #eadbc7;"><span id="hours"></span>HORAS</li>
+            <li style="background-color: #eadbc7;"><span id="minutes"></span>MINUTOS</li>
+            <li style="background-color: #eadbc7;"><span id="seconds"></span>SEGUNDOS</li>
+          </ul>
+        </div>
+      </div>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-  </div>
 
+  
   <!--SEGUNDA FOTO, QUIZA AQUI VAYA LA INFO DE LA MISA-->
   <div class="bg2">
     <br><br><br><br><br><br><br><br><br><br><br>
-      <div class="bgTextos" style="margin: 10px;">
-        <br>
-        <center>
-          <img src="images/icons/church2.png" width="30%" height="auto"><br>
-          <a class="textos">Parroquia El Señor de la Misericordia</a><br>
-          <a class="textos">18:00</a><br><br><br>
-          <a class="textosPequeños">Pueblo Serena, Carr Nacional #500, Sin Nombre de Col 50, 67350 Monterrey, N.L.</a><br><br>
-          <a href="https://www.google.com.mx/maps/place/Parroquia+El+Se%C3%B1or+de+la+Misericordia/@25.5756457,-100.25021,17z/data=!3m1!4b1!4m5!3m4!1s0x8662c74fe88badc7:0x4adf7f3508cd3f60!8m2!3d25.5757551!4d-100.2479419?hl=es&authuser=0"><img src="images/maps.png" width="30%" height="auto"></a> 
-          <!--iframe
+    <div class="bgTextos" style="margin: 10px;">
+      <br>
+      <center>
+        <img src="images/icons/church2.png" width="30%" height="auto"><br>
+        <a class="textos">PARROQUIA EL SEÑOR DE LA MISERICORDIA</a><br>
+        <a class="textos">18:00</a><br><br><br>
+        <a class="textosPequeños">Pueblo Serena, Carr Nacional #500, Sin Nombre de Col 50, 67350 Monterrey,
+          N.L.</a><br><br>
+        <a
+          href="https://www.google.com.mx/maps/place/Parroquia+El+Se%C3%B1or+de+la+Misericordia/@25.5756457,-100.25021,17z/data=!3m1!4b1!4m5!3m4!1s0x8662c74fe88badc7:0x4adf7f3508cd3f60!8m2!3d25.5757551!4d-100.2479419?hl=es&authuser=0"><img
+            src="images/maps.png" width="30%" height="auto"></a>
+        <!--iframe
             src="https://www.google.com.mx/maps/place/Parroquia+El+Se%C3%B1or+de+la+Misericordia/@25.5756457,-100.25021,17z/data=!3m1!4b1!4m5!3m4!1s0x8662c74fe88badc7:0x4adf7f3508cd3f60!8m2!3d25.5757551!4d-100.2479419?hl=es&authuser=0"
             width="300" height="300" loading="lazy" style="border:5px solid white;"-->
-          </iframe>
-        </center>
-        <br><br>
+        </iframe>
+      </center>
+      <br><br>
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </div>
@@ -196,33 +219,37 @@
       <br>
       <center>
         <img src="images/icons/corazon.png" width="20%" height="auto"><br>
-        <a class="textos">La Herencia Eventos</a><br>
+        <a class="textos">LA HERENCIA EVENTOS</a><br>
         <a class="textos">20:00</a><br><br><br>
         <a class="textosPequeños">Quinta San Jorge, 67300, Santiago, N.L.</a><br><br>
-        <a href="https://www.google.com/maps/place/La+Herencia+Monterrey/@25.4650195,-100.1748996,15z/data=!4m2!3m1!1s0x0:0x338432ecb4867b70?sa=X&hl=es&ved=2ahUKEwjehPOcgpb1AhW-k2oFHTYCARYQ_BJ6BAgoEAU"><img src="images/maps.png" width="30%" height=" auto"></a> 
+        <a
+          href="https://www.google.com/maps/place/La+Herencia+Monterrey/@25.4650195,-100.1748996,15z/data=!4m2!3m1!1s0x0:0x338432ecb4867b70?sa=X&hl=es&ved=2ahUKEwjehPOcgpb1AhW-k2oFHTYCARYQ_BJ6BAgoEAU"><img
+            src="images/maps.png" width="30%" height=" auto"></a>
         <!--iframe
           src="https://www.google.com.mx/maps/place/Parroquia+El+Se%C3%B1or+de+la+Misericordia/@25.5756457,-100.25021,17z/data=!3m1!4b1!4m5!3m4!1s0x8662c74fe88badc7:0x4adf7f3508cd3f60!8m2!3d25.5757551!4d-100.2479419?hl=es&authuser=0"
           width="300" height="300" loading="lazy" style="border:5px solid white;">
         </iframe-->
       </center>
       <br><br>
-  </div>
+    </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </div>
 
-<!--CUARTA FOTO, QUIZA AQUI VAYA LA INFO DE LA FIESTA-->
-<div class="bg4"> 
-  <br><br><br><br><br><br><br>
-  <center>
-    <div style="background-color: rgb(134, 204, 166); opacity: 0.8;">
-      <br><br>
-      <a style="font-family: AmellindaWeddings; color:whitesmoke; font-size: 350%;">Confirma tu asistencia</a><br>
-      <a style="font-family: AmellindaWeddings; color:whitesmoke; font-size: 150%;">y la de tu acompañante</a><br>
-      <a href="https://api.whatsapp.com/send?phone=+528120389636&text=hola,%20ahí%20nos%20vemos%20;)"><img src="images/icons/wa.png" width="20%" height=" auto"></a> 
-      <br><br>
-    </div>
-  </center>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-</div>
+  <!--CUARTA FOTO, QUIZA AQUI VAYA LA INFO DE LA FIESTA-->
+  <div class="bg4">
+    <br><br><br><br><br><br><br>
+    <center>
+      <div style="background-color: rgb(134, 204, 166); opacity: 0.8;">
+        <br><br>
+        <a style="font-family: AmellindaWeddings; color:whitesmoke; font-size: 350%;">Confirma tu asistencia</a><br>
+        <a style="font-family: AmellindaWeddings; color:whitesmoke; font-size: 150%;">y la de tu acompañante</a><br>
+        <a href="https://api.whatsapp.com/send?phone=+528120389636&text=hola,%20ahí%20nos%20vemos%20;)"><img
+            src="images/icons/wa.png" width="20%" height=" auto"></a>
+        <br><br>
+      </div>
+    </center>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
 </body>
+
 </html>

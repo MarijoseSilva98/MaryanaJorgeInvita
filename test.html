@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<style>
+
+    .containerNumeros {
+        margin: 0 auto;
+        text-align: center;
+        font-family: southmore;
+        color: black;
+        font-size: 120%;
+    }
+   li {
+        display: inline-block;
+        font-size: 1.5em;
+        list-style-type: none;
+        padding: 1em;
+        text-transform: uppercase;
+    }
+
+   li span {
+        display: block;
+        font-size: 4.5rem;
+    }
+</style>
+<script>
+    (function () {
+        const second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
+        var wedding = new Date("Apr 22, 2022 17:00:00").getTime()
+
+        const countDown = new Date(wedding).getTime(),
+            x = setInterval(function () {
+
+                const now = new Date().getTime(),
+                    distance = countDown - now;
+
+                document.getElementById("days").innerText = Math.floor(distance / (day)),
+                    document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                    document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                    document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+            }, 0)
+    }());
+</script>
+
+<body>
+    <div class="containerNumeros">
+        <div id="countdown">
+            <ul>
+                <li style="background-color: #eadbc7;"><span id="days"></span>dÍAS</li>
+                <li style="background-color: #eadbc7;"><span id="hours"></span>HORAS</li>
+                <li style="background-color: #eadbc7;"><span id="minutes"></span>MINUTOS</li>
+                <li style="background-color: #eadbc7;"><span id="seconds"></span>SEGUNDOS</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+
+</html>
