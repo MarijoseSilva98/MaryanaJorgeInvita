@@ -251,7 +251,9 @@
       <div style="background-color: rgb(134, 204, 166); opacity: 0.8;">
         <br><br>
         <a class="textos">Dale click al icono para confirmar tu asistencia</a><br>
-        <a href="https://api.whatsapp.com/send?phone=+528120389636&text=hola,%20soy%20_____%20y%20confirmo%20mi%20asistencia%20y%20mis%20__%20acompañantes%20a%20la%20boda%20de%20Maryana%20y%20Jorge%20el%20próximo%2022%20de%20Abril%20"><img
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="acompanantes" placeholder="# de acompañantes">
+        <a href="#" onclick="mensajeWa();return true"><img
             src="images/icons/wa.png" width="10%" height=" auto"></a>
         <br><br>
       </div>
@@ -259,5 +261,14 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </div>
 </body>
+
+<script>
+  function mensajeWa() {
+    var nombre = document.getElementById("nombre").value
+    var acompanantes = document.getElementById("acompanantes").value
+
+    window.location.href="https://api.whatsapp.com/send?phone=+528120389636&text=Hola,%20soy%20 "+ nombre +" %20y%20confirmo%20mi%20asistencia%20y%20mis%20 "+ acompanantes +" %20acompa%C3%B1antes%20a%20la%20boda%20de%20Maryana%20y%20Jorge%20el%20pr%C3%B3ximo%2022%20de%20Abril%20"
+  }
+</script>
 
 </html>
