@@ -4,25 +4,27 @@
 <head>
   <title>Cleaned M&J's wedding</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <!-- <meta name="viewport" content="width=device-stylesheet" type="text/css" media="all"> -->
+ <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+  <meta name="viewport" content="width=device-stylesheet" type="text/css" media="all"> 
 </head>
 
 <style>
-  :root {
+  /*:root {
     --smaller: .75;
-  }
+  }*/
 
   @font-face {
     font-family: AmellindaWeddings;
     src: url('fonts/amellinda_weddings/Amellinda\ Weddings.otf');
   }
 
-  .MJ {
+  .fecha{
     font-family: AmellindaWeddings;
     font-size: 300%;
     text-align: center;
-    color: bisque;
+    color: black;
+    /*background-color: blanchedalmond;*/
+
   }
 
   @font-face {
@@ -34,7 +36,7 @@
     color: white;
     font-family: louis_george;
     font-weight: bolder;
-    font-size: 200%;
+    font-size: 100%;
     text-align: center;
     background-color: #c2a19d;
     border: cyan;
@@ -50,12 +52,17 @@
     font-family: louis_george;
     src: url('fonts/louis_george_caf/Louis George Cafe.ttf');
   }
-
-  .fecha {
-    font-family: southmore;
-    color: floralwhite;
-    font-size: 150%;
-    background-color: #daae9e;
+  @font-face {
+    font-family: Angelica;
+    src: url('fonts/white_angelica/WhiteAngelica.ttf');
+  }
+  .MaryanaYJorge {
+    font-family: Angelica;
+    font-size: 600%;
+    text-align: center;
+    color: bisque;
+    font-weight: bold;
+    
   }
 
   .bg1 {
@@ -190,7 +197,8 @@
   <!--TODO DENTRO DE ESTE DIV-->
   <!--MARYANA & JORGE + CONTDOWN-->
   <div class="bg1">
-    <div class="MJ"><br>Maryana<br>y<br>Jorge<br><br><br><br><br><br></div>
+    <div class="MaryanaYJorge "><br>Maryana<br>+<br>Jorge<br><br><br><br></div>
+    <div class="fecha"><br>22.04.2022</div>
     <div class="containerNumeros">
       <div id="countdown">
         <ul>
@@ -201,13 +209,13 @@
         </ul>
       </div>
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br>
   </div>
 
 
   <!--SEGUNDA FOTO, QUIZA AQUI VAYA LA INFO DE LA MISA-->
   <div class="bg2">
-    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <div class="bgTextos" style="margin: 10px;">
       <br>
       <center>
@@ -256,16 +264,13 @@
 
   <!--CUARTA FOTO, QUIZA AQUI VAYA LA INFO DE LA FIESTA-->
   <div class="bg4">
-    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br>
     <center>
       <div style="background-color: rgb(134, 204, 166); opacity: 0.8;">
         <br><br>
-        <a style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:whitesmoke; font-size: 350%;">Confirma
-          tu asistencia</a><br>
-        <a style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:whitesmoke; font-size: 150%;">y la
-          de tu acompañante</a><br>
-        <a href="https://api.whatsapp.com/send?phone=+528120389636&text=hola,%20ahí%20nos%20vemos%20;)"><img
-            src="images/icons/wa.png" width="20%" height=" auto"></a>
+        <a class="textos">Dale click al icono para confirmar tu asistencia</a><br>
+        <a href="https://api.whatsapp.com/send?phone=+528120389636&text=hola,%20soy%20_____%20y%20confirmo%20mi%20asistencia%20y%20mis%20__%20acompañantes%20a%20la%20boda%20de%20Maryana%20y%20Jorge%20el%20próximo%2022%20de%20Abril%20"><img
+            src="images/icons/wa.png" width="10%" height=" auto"></a>
         <br><br>
       </div>
     </center>
