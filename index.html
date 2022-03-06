@@ -337,7 +337,7 @@
               </datalist>
             </td>
             <td rowspan="2">
-              <a href="#" onclick="mensajeWa();return true">
+              <a href="#" onclick="mensajeWa();">
                 <img src="images/icons/wa2.png" width="100%" height="auto" style="display: block;">
               </a>
             </td>
@@ -351,7 +351,14 @@
     <br><br><br><br><br><br><br><br>
     <br><br>
   </div>
-  </script>
 </body>
+
+<script>
+  function mensajeWa() {
+    var nombre = document.getElementById("nombre").value
+    var acompanantes = document.getElementById("acompanantes").value
+    window.location.href = "https://api.whatsapp.com/send?phone=+528120389636&text=Hola,%20soy%20 " + nombre + " %20y%20confirmo%20mi%20asistencia%20y%20mis%20 " + acompanantes + " %20acompa%C3%B1antes%20a%20la%20boda%20de%20Maryana%20y%20Jorge%20el%20pr%C3%B3ximo%2022%20de%20Abril%20"
+  }
+</script>
 
 </html>
