@@ -5,16 +5,13 @@
   <title>Maryana + Jorge</title>
   <meta charset="utf-8">
   <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+
   <meta name="viewport" content="width=device-stylesheet" type="text/css" media="all">
 </head>
 
 <style>
-  /*:root {
-    --smaller: .75;
-  }*/
-
-
-
   @font-face {
     font-family: louis_george;
     src: url('fonts/louis_george_caf/Louis George Cafe.ttf');
@@ -27,12 +24,12 @@
 
   @font-face {
     font-family: textosPequeños;
-    src: url(fonts/secret_admirer_2/Secret\ Admirer.ttf);
+    src: url(fonts/mont/Mont-HeavyDEMO.otf);
   }
 
   @font-face {
     font-family: txtPeq;
-    src: url(fonts/elronet_monospace/Elronmonospace.ttf)
+    src: url(fonts/dream_orphans/dream\ orphans.otf)
   }
 
   .MaryanaYJorge {
@@ -51,6 +48,8 @@
     text-align: center;
     color: black;
     font-weight: bolder;
+    padding-left: 0.3rem;
+    padding-right: 00.3rem;
   }
 
   .bg1 {
@@ -62,7 +61,7 @@
   }
 
   .bg2 {
-    background-image: url('images/1998Editada.jpeg');
+    background-image: url('images/IMG_2079.jpg');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -86,7 +85,13 @@
     background-size: cover;
     background-attachment: scroll;
   }
-
+  .bgMensaje{
+    background-image: url('images/IMG_2075.jpg');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    background-attachment:initial;
+  }
   .bgTextos {
     background-color: #ffede1;
     background-repeat: no-repeat;
@@ -95,6 +100,14 @@
     opacity: 0.7;
 
   }
+  .bgtextoMensaje {
+    background-color:azure;
+    opacity: 0.7;
+    font-family: louis_george;
+    font-size: 180%;
+    color: black;
+  }
+
 
   .textos {
     font-family: louis_george;
@@ -107,7 +120,7 @@
   }
 
   .textosPequeños {
-    font-family: txtPeq;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-style: italic;
     font-size: 160%;
     border-radius: 35px;
@@ -122,6 +135,14 @@
     font-family: louis_george;
     color: black;
     font-size: 175%;
+  }
+
+  .bgMensajeFondoBlanco{
+    background-color:#f9f9f9;
+    border-style: double;
+    border-color:black;
+    border-width: 15px;
+    opacity: 0.7;
   }
 
   li {
@@ -145,17 +166,55 @@
     outline: 0;
     height: 80px;
     width: auto;
+    margin-left: 50px;
+    padding-left: 30px;
+    padding-right: 20px;
+    font-size: xx-large;
+    font-family: louis_george;
+  }
+
+  .textboxAcompanantes {
+    border: 1px solid #848484;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    outline: 0;
+    height: 80px;
+    width: 275px;
+    margin: 10px;
     padding-left: 20px;
     padding-right: 20px;
     font-size: xx-large;
     font-family: louis_george;
   }
 
-  .table {
-    padding-bottom: 125px;
-    margin-left: auto;
-    margin-right: auto;
+  .instrucciones{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
+
+  .table {
+    /* padding-bottom: 125px; */
+    text-align: center;
+    margin-bottom: auto;
+  }
+  .td{
+    border: 10px;
+    padding:1rem;
+    font-family: Angelica;
+    font-size: 190%;
+    font-weight: bold;
+
+  }
+
+  .container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  align-content: center;
+}
+
 
   /*ESTILOS DE DROPDOWN*/
   .dropbtn {
@@ -199,6 +258,7 @@
   .dropdown:hover .dropbtn {
     background-color: #3e8e41;
   }
+
 </style>
 <script>
 
@@ -232,27 +292,56 @@
     <div class="MaryanaYJorge ">Maryana<br>+<br>Jorge<br><br><br></div>
     <!--div class="fecha"><br>22.04.2022</div-->
     <br><br><br>
-    <center>
-      <a class="fecha"
-        style="margin: 5px; background-color: #eadbc7; border:darkseagreen; border-width: 6px; border-style:double">
-        22.04.2022
-      </a>
-    </center>
     <div class="containerNumeros">
       <div id="countdown">
         <ul>
-          <li style="background-color: #eadbc7; border-color:darkolivegreen; border-style: dashed; border-width: 6px;"><span id="days"></span>dÍAS
+          <li style="background-color: #eadbc7; border-color:white; border-width: 3px; border-style: ridge;">
+            <span id="days"></span>dÍAS
           </li>
-          <li style="background-color: #eadbc7; border-color: darkolivegreen; border-style:dashed; border-width: 6px;"><span id="hours"></span>HORAS
+          <li style="background-color: #eadbc7; border-color:white; border-width: 3px; border-style: ridge;">
+            <span id="hours"></span>HORAS
           </li>
-          <li style="background-color: #eadbc7; border-color: darkolivegreen; border-style:dashed; border-width: 6px;"><span
-              id="minutes"></span>MINUTOS</li>
-          <li style="background-color: #eadbc7; border-color: darkolivegreen; border-style:dashed; border-width: 6px;"><span
-              id="seconds"></span>SEGUNDOS</li>
+          <li style="background-color: #eadbc7; border-color:white; border-width: 3px; border-style: ridge;">
+            <span id="minutes"></span>MINUTOS</li>
+          <li style="background-color: #eadbc7; border-color:white; border-width: 3px; border-style: ridge; ">
+            <span id="seconds"></span>SEGUNDOS</li>
         </ul>
       </div>
     </div>
     <br><br><br><br><br><br>
+  </div>
+
+  <!--SEGUNDA FOTO, MENSAJE DE INVITACION-->
+  <div class="bgMensaje">
+    <br><br>
+    <br><br><br><br><br>
+    <div class="bgMensajeFondoBlanco">
+      <br><br>
+      <center>
+        <a class="textosPequeños" style="font-style: normal;">Junto con nuestros padres: </a><br><br>
+        <table class="table">
+          <tr>
+            <td class="td">Blanca Cuellar Cisneros </td>
+            <td class="td">Lucila Villarreal Leal</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td class="td">Jorge Moreno Salazar </td> 
+          </tr><br><br>
+        </table>
+        <br>
+        <a class="textosPequeños">
+          Queremos compartir con ustedes la alegría de nuestra unión, el día
+        </a>
+        <br>
+        <a
+          class="textosPequeños" style="font-weight: bold; font-style: normal;">
+          VIERNES 22 DE ABRIL DEL 2022
+        </a>
+        <br><br><br>
+      </center>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br>
   </div>
 
 
@@ -264,7 +353,7 @@
       <center>
         <img src="images/icons/church2.png" width="30%" height="auto"><br>
         <a class="textos">PARROQUIA EL SEÑOR DE LA MISERICORDIA</a><br>
-        <a class="textos">18:00</a><br><br><br><br><br><br>
+        <a class="textos">18:00 HRS</a><br><br><br><br><br><br>
         <a class="textosPequeños">Pueblo Serena, Carr Nacional #500, Monterrey,
           N.L.</a><br>
         <a
@@ -295,7 +384,7 @@
         <table style="margin-left: auto; margin-right: auto; border-spacing: 30px;">
           <tr>
             <td>
-              <a class="textos">20:00</a>
+              <a class="textos">20:00 HRS</a>
             </td>
             <td>
               <img src="images/icons/sobre2.png" width="80%" height="auto" style="display: block;">
@@ -316,40 +405,58 @@
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   </div>
 
-  <!--CUARTA FOTO, CONFIRMAA TU ASISTENCIA-->
+  <!--CUARTA FOTO, CONFIRMA TU ASISTENCIA-->
+    <div style="background-color: #b5ffda; opacity: 0.8; height: auto;">
+    <br>
+    <h1 class="fecha" style="text-align: center;">¡Ayúdanos a confirmar tu asistencia!</h1> <br>
+    <br>
+    <div style="margin-left: 3rem; margin-right: 3rem;">
+      <a class="textosPequeños" style="font-style: normal;">
+        1. En el primer recuadro de abajo escribe tu nombre y apellidos. <br><br>
+        2. Selecciona la cantidad de invitados que estás confirmando (Ej. si vas tú y tu acomapañante, selecciona 2). <br><br>
+        3. Dale click al ícono de WhatsApp para enviar. <br><br>
+      </a>
+
+    </div>
+    
+    
+  </div>
+  <div style="background-color: #b5ffda; opacity: 0.8; height: auto;">
+    <center>
+    <div class="container">
+      <input class="textboxNombre" type="text" id="nombre" placeholder="Nombre y Apellido">
+      <input class="textboxAcompanantes" type="text" id="acompanantes" name="acompanantes" list="NroAcompanantes"
+        placeholder="No. de Invitados">
+      <datalist id="NroAcompanantes">
+        <option value="1">
+        <option value="2">
+        <option value="3">
+        <option value="4">
+        <option value="5">  
+        <option value="6">  
+        <option value="7">  
+        <option value="8">  
+        <option value="9">  
+        <option value="10">  
+      </datalist>
+
+      <a href="#" onclick="mensajeWa();">
+        <img src="images/icons/walogo.png" width="50%" height="50%" style="float: left;">
+      </a>
+
+    </div>
+    </center> 
+    
+    
+  </div>
   <div class="bg4">
     <center>
-      <div style="background-color: rgb(134, 204, 166); opacity: 0.8; height: auto;">
-        <br>
-        <a class="fecha">¡Confirma tu asistencia!</a>
-        <br>
-        <table style="padding-bottom: 50px; padding-top: 50px;">
-          <tr>
-            <td>
-              <input class="textboxNombre" type="text" id="nombre" placeholder="Nombre Apellido">
-            </td>
-            <td>
-              <input class="textboxNombre" type="text" id="acompanantes" name="acompanantes" list="NroAcompanantes"
-                placeholder="Nro de Acompañantes">
-              <datalist id="NroAcompanantes">
-                <option value="1">
-                <option value="2">
-              </datalist>
-            </td>
-            <td rowspan="2">
-              <a href="#" onclick="mensajeWa();">
-                <img src="images/icons/wa2.png" width="100%" height="auto" style="display: block;">
-              </a>
-            </td>
-          </tr>
-      </div>
-      </table>
-    </center>
-    <br><br><br><br><br><br><br><br>
+      <br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br>
     <br><br><br><br><br><br><br><br>
     <br><br>
+    </center>
   </div>
 </body>
 
@@ -357,7 +464,9 @@
   function mensajeWa() {
     var nombre = document.getElementById("nombre").value
     var acompanantes = document.getElementById("acompanantes").value
-    window.location.href = "https://api.whatsapp.com/send?phone=+528120389636&text=Hola,%20soy%20 " + nombre + " %20y%20confirmo%20mi%20asistencia%20y%20mis%20 " + acompanantes + " %20acompa%C3%B1antes%20a%20la%20boda%20de%20Maryana%20y%20Jorge%20el%20pr%C3%B3ximo%2022%20de%20Abril%20"
+    window.location.href = "https://api.whatsapp.com/send?phone=+528116578203&text=Hola,%20soy%20*" + nombre +
+      "*,%20confirmo%20asistencia%20a%20la%20boda%20de%20Maryana%20y%20Jorge%20el%20pr%C3%B3ximo%2022%20de%20Abril%20del%202022" +
+      "%20%0aNumero%20de%20Invitados:%20" + acompanantes
   }
 </script>
 
